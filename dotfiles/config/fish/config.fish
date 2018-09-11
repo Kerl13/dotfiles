@@ -1,0 +1,4 @@
+
+
+# OPAM configuration
+. /home/martin/.opam/opam-init/init.fish > /dev/null 2> /dev/null or true
