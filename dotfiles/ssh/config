@@ -1,0 +1,74 @@
+AddKeysToAgent yes
+
+Host chyper
+    HostName wkerl.me
+    IdentityFile ~/.ssh/chyper
+    User martin
+
+Host bernhardt
+    HostName bernhardt
+    IdentityFile ~/.ssh/bernhardt
+    User kerl
+
+# ---
+# ENS
+# ---
+
+Host natalie
+    User admin
+    HostName 129.199.146.97
+
+Host sas
+    User mpepin
+    HostName sas.eleves.ens.fr
+    IdentityFile ~/.ssh/sas
+
+Host cof
+    User mpepin
+    HostName cof.ens.fr
+    IdentityFile ~/.ssh/cof
+
+Host s-cof
+    User mpepin
+    HostName cof.ens.fr
+    IdentityFile ~/.ssh/cof
+    ProxyCommand ssh sas nc %h %p 2> /dev/null
+
+Host wikis
+    User wikis
+    HostName www.eleves.ens.fr
+    IdentityFile ~/.ssh/cof
+
+Host pei
+    User mpepin
+    HostName pei2.ens.fr
+    IdentityFile ~/.ssh/cof
+
+# ---
+# Git
+# ---
+
+Host bitbucket.org
+    User git
+    HostName bitbucket.org
+    IdentityFile ~/.ssh/bitbucket
+
+Host github.com
+    User git
+    HostName github.com
+    IdentityFile ~/.ssh/github
+
+Host gist.github.com
+    User git
+    HostName gist.github.com
+    IdentityFile ~/.ssh/github
+
+Host gitlab.com
+    User git
+    HostName gitlab.com
+    IdentityFile ~/.ssh/gitlab
+
+Host git.eleves.ens.fr
+    User git
+    HostName git.eleves.ens.fr
+    IdentityFile ~/.ssh/gitens
