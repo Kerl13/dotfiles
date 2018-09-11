@@ -15,6 +15,7 @@ order += "volume master"
 #order += "disk /"
 order += "battery all"
 #order += "load"
+order += "tztime local"
 
 volume master {
     format = "master: %volume"
@@ -42,4 +43,8 @@ disk "/" {
     format = "%free"
     low_threshold = 20
     threshold_type = percentage_avail
+}
+
+tztime local {
+        format = "%Y-%m-%d %H:%M"
 }
