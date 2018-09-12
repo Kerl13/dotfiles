@@ -185,3 +185,5 @@ new_window pixel 1
 assign [class="Firefox"] $ws1
 assign [class="Telegram"] $ws2
 assign [class="Atom"] $ws10
+
+bindsym $mod+Escape exec i3lock -c 002b36
