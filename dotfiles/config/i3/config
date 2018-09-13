@@ -188,3 +188,4 @@ assign [class="Thunderbird"] $ws3
 assign [class="Atom"] $ws10
 
 bindsym $mod+Escape exec i3lock -c 002b36
+bindsym Pause exec i3lock -c 002b36
