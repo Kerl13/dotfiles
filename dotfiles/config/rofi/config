@@ -1,2 +1,2 @@
 rofi.combi-modi:     windown,drun,ssh
-rofi.modi:           drun
+rofi.modi:           drun,window,ssh
