@@ -187,5 +187,9 @@ assign [class="Telegram"] $ws2
 assign [class="Thunderbird"] $ws3
 assign [class="Atom"] $ws10
 
+bindsym XF86AudioRaiseVolume exec amixer sset Master 5+
+bindsym XF86AudioLowerVolume exec amixer sset Master 5-
+bindsym XF86AudioMute        exec /usr/bin/fish -c switchmute
+
 bindsym $mod+Escape exec i3lock -c 002b36
 bindsym Pause exec i3lock -c 002b36
