@@ -21,28 +21,22 @@ Host natalie
 Host sas
     User mpepin
     HostName sas.eleves.ens.fr
-    IdentityFile ~/.ssh/sas
+    IdentityFile ~/.ssh/ens
 
 Host cof
     User mpepin
     HostName cof.ens.fr
-    IdentityFile ~/.ssh/cof
-
-Host s-cof
-    User mpepin
-    HostName cof.ens.fr
-    IdentityFile ~/.ssh/cof
-    ProxyCommand ssh sas nc %h %p 2> /dev/null
+    IdentityFile ~/.ssh/ens
 
 Host wikis
     User wikis
     HostName www.eleves.ens.fr
-    IdentityFile ~/.ssh/cof
+    IdentityFile ~/.ssh/ens
 
 Host pei
     User mpepin
     HostName pei2.ens.fr
-    IdentityFile ~/.ssh/cof
+    IdentityFile ~/.ssh/ens
 
 # ---
 # Git
