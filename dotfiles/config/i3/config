@@ -193,3 +193,6 @@ bindsym XF86AudioMute        exec /usr/bin/fish -c switchmute
 
 bindsym $mod+Escape exec i3lock -c 002b36
 bindsym Pause exec i3lock -c 002b36
+
+bindsym $mod+Next move workspace to output right
+bindsym $mod+Prior move workspace to output left
