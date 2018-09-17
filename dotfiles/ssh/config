@@ -53,7 +53,7 @@ Host bitbucket.org
     HostName bitbucket.org
     IdentityFile ~/.ssh/bitbucket
 
-Host github.com
+Host github
     User git
     HostName github.com
     IdentityFile ~/.ssh/github
@@ -63,12 +63,12 @@ Host gist.github.com
     HostName gist.github.com
     IdentityFile ~/.ssh/github
 
-Host gitlab.com
+Host gitlab
     User git
     HostName gitlab.com
     IdentityFile ~/.ssh/gitlab
 
-Host git.eleves.ens.fr
+Host gitens
     User git
     HostName git.eleves.ens.fr
     IdentityFile ~/.ssh/gitens
