@@ -1,0 +1,74 @@
+#!/usr/bin/python
+
+
+import argparse
+import os
+
+
+# Brightness controller #############################################
+
+
+class Controller:
+    def __init__(self, prefix):
+        self.prefix = prefix
+        self.max_val = int(self._read("max_brightness"))
+
+    def _read(self, filename):
+        with open(os.path.join(self.prefix, filename)) as file:
+            return file.read()
+
+    def _clamp(self, value):
+        return max(0, min(self.max_val, value))
+
+    def _write(self, filename, value):
+        with open(os.path.join(self.prefix, filename), "w") as file:
+            file.write(str(value))
+
+    def inc(self, x):
+        self._write("brightness", self._clamp(self.get() + x))
+
+    def dec(self, x):
+        self.inc(-x)
+
+    def set(self, x):
+        self._write("brightness", x)
+
+    def get(self):
+        return int(self._read("brightness"))
+
+
+# Command line parser ###############################################
+
+devices = {
+    "kb": Controller("/sys/class/leds/smc::kbd_backlight/"),
+    "screen": Controller("/sys/class/backlight/acpi_video0/"),
+}
+
+parser = argparse.ArgumentParser(description="Brightness controller")
+parser.add_argument("device", metavar="DEVICE", nargs="?", choices=devices.keys())
+parser.add_argument("action", metavar="ACTION", type=str, nargs="?")
+
+
+def pprint(device_name):
+    ctrl = devices[device_name]
+    print(f"{device_name}: [{ctrl.get()} / {ctrl.max_val}]")
+
+
+if __name__ == "__main__":
+    config = parser.parse_args()
+    if config.device:
+        ctrl = devices[config.device]
+        if config.action:
+            if config.action[0] == "-":
+                dx = int(config.action[1:])
+                ctrl.dec(dx)
+            elif config.action[0] == "+":
+                dx = int(config.action[1:])
+                ctrl.inc(dx)
+            else:
+                ctrl.set(int(config.action))
+        else:
+            pprint(config.device)
+    else:
+        for name in devices.keys():
+            pprint(name)

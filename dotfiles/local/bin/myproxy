@@ -1,0 +1,3 @@
+#!/bin/sh
+
+ssh -vND 7411 chyper
