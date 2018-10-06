@@ -17,7 +17,8 @@ class Link:
         return f"ln -s {self.source} {self.target}"
 
     def execute(self):
-        raise NotImplementedError()
+        print(str(self))
+        os.symlink(self.source, self.target)
 
 
 class Ignore:
@@ -71,8 +72,8 @@ if __name__ == "__main__":
     os.chdir("dotfiles")
     commands = []
     build_cmd_list("", commands)
-    if config.dry_run:
-        for cmd in commands:
+    for cmd in commands:
+        if config.dry_run:
             print(cmd)
-    else:
-        raise NotImplementedError()
+        else:
+            cmd.execute()
