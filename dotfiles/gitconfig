@@ -1,0 +1,5 @@
+[user]
+	name = Martin Pépin
+	email = kerl@wkerl.me
+[core]
+    editor = /usr/bin/vim
