@@ -13,7 +13,7 @@ URxvt.fading:               0
 ! URxvt.urgentOnBell:         true
 ! URxvt.visualBell:           true
 URxvt.loginShell:           true
-URxvt.saveLines:            50
+URxvt.saveLines:            1000
 URxvt.internalBorder:       3
 URxvt.lineSpace:            0
 
@@ -25,8 +25,6 @@ URxvt*boldFont: xft:DejaVu sans Mono:size=10,style=bold
 
 ! Fix font space
 !URxvt*letterSpace: -1
-
-Urxvt.saveLines: 10000
 
 ! Scrollbar
 URxvt.scrollStyle:          rxvt
