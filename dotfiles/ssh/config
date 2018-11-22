@@ -66,3 +66,8 @@ Host gitens
     User git
     HostName git.eleves.ens.fr
     IdentityFile ~/.ssh/gitens
+
+Host gitlip6
+    User git
+    HostName gitlab.lip6.fr
+    IdentityFile ~/.ssh/gitlip6
