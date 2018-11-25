@@ -1,0 +1,3 @@
+#!/bin/sh
+
+python "$HOME/git/les-boloss/skeleton/skeleton" "$@"
