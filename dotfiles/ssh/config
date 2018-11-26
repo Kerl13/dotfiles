@@ -10,6 +10,17 @@ Host bernhardt
     IdentityFile ~/.ssh/bernhardt
     User kerl
 
+
+# ---
+# LIP6
+# ---
+
+Host sphinx
+    HostName sphinx.lip6.fr
+    IdentityFile ~/.ssh/lip6
+    User pepin
+
+
 # ---
 # ENS
 # ---
