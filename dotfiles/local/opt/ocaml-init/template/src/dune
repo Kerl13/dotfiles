@@ -1,8 +1,0 @@
-(library
- (name lib)
- (modules Lib))
-
-(executable
- (name main)
- (modules Main)
- (libraries lib))
