@@ -11,3 +11,5 @@ end
 
 # Add $HOME/.local/bin to PATH
 set -gx PATH "$HOME/.local/bin" $PATH
+set -gx VISUAL vim
+set -gx EDITOR vim
