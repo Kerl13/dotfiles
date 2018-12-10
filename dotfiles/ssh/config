@@ -10,6 +10,11 @@ Host bernhardt
     IdentityFile ~/.ssh/bernhardt
     User kerl
 
+Host sage
+    HostName trac.sagemath.org
+    IdentityFile ~/.ssh/sage
+    User git
+
 
 # ---
 # LIP6
