@@ -20,6 +20,16 @@ Host sage
 # LIP6
 # ---
 
+Host ppti
+    HostName ssh.ufr-info-p6.jussieu.fr
+    IdentityFile ~/.ssh/ppti
+    User pepin
+
+Host ppti-tme
+    HostName ppti-14-302-01.ufr-info-p6.jussieu.fr
+    IdentityFile ~/.ssh/ppti
+    User pepin
+
 Host sphinx
     HostName sphinx.lip6.fr
     IdentityFile ~/.ssh/lip6
