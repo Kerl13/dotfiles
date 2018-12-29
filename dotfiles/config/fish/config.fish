@@ -13,3 +13,4 @@ end
 set -gx PATH "$HOME/.local/bin" $PATH
 set -gx VISUAL vim
 set -gx EDITOR vim
+set -U fish_greeting ''
