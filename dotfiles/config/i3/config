@@ -167,8 +167,6 @@ set $volume_inc pactl set-sink-mute 0 false && pactl set-sink-volume 0 +5%
 set $volume_dec pactl set-sink-mute 0 false && pactl set-sink-volume 0 -5%
 set $mute_toggle pactl set-sink-mute 0 toggle
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
 bar {
     colors {
         background #002028
@@ -177,11 +175,8 @@ bar {
 	strip_workspace_numbers yes
 	position top
 	font pango:DejaVu Sans Mono, Icons 9
-    status_command i3status
+    status_command py3status
     separator_symbol " | "
-
-    bindsym button4 exec $volume_inc
-    bindsym button5 exec $volume_dec
 }
 
 bindsym XF86AudioRaiseVolume exec $volume_inc
