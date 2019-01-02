@@ -13,4 +13,5 @@ end
 set -gx PATH "$HOME/.local/bin" $PATH
 set -gx VISUAL vim
 set -gx EDITOR vim
+set -gx LESSHISTFILE '-'
 set -U fish_greeting ''
