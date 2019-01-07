@@ -2,6 +2,9 @@
 
 set -euC
 
+if [ "_$(command -v wifi)" = "_" ]; then
+    exit 0
+fi
 
 status="$(wifi | sed 's/^.*= \([a-z]*\).*/\1/')"
 color="#FF0000"
