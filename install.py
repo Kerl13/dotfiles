@@ -58,6 +58,7 @@ def build_cmd_list(location, cmds):
         if not os.path.exists(target):
             cmds.append(Link(source, target))
         elif os.path.islink(target):
+            # XXX. Check that this is the right link
             cmds.append(Ignore(file))
         elif os.path.isdir(target) and os.path.isdir(file):
             build_cmd_list(file, cmds)
