@@ -1,12 +1,10 @@
 #!/bin/sh
 
 
-if [ "$(hostname)" != "aji" ]; then
-    echo 'hum, vraiment ?'
-fi
+DEST="/home/martin/backup/$(hostname)"
 
 
 rsync \
     --exclude-from=/home/martin/.config/backup-exclude.txt \
     -cavz /home/martin \
-    chyper:/home/martin/backup
+    "chyper:$DEST"
