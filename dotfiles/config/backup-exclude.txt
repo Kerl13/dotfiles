@@ -4,6 +4,7 @@
 .Xresources
 .atom
 .cache
+.config/Atom/Cache
 .ecryptfs
 .esd_auth
 .fehbg
@@ -11,6 +12,7 @@
 .ipython
 .maxima
 .minecraft
+.npm
 .ocamlinit
 .ocp
 .opam
