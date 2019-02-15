@@ -163,8 +163,8 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-set $volume_inc pactl set-sink-mute 0 false && pactl set-sink-volume 0 +5%
-set $volume_dec pactl set-sink-mute 0 false && pactl set-sink-volume 0 -5%
+set $volume_inc pactl set-sink-mute 0 false && pactl set-sink-volume 0 +3%
+set $volume_dec pactl set-sink-mute 0 false && pactl set-sink-volume 0 -3%
 set $mute_toggle pactl set-sink-mute 0 toggle
 
 bar {
