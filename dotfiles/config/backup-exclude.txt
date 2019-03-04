@@ -3,13 +3,18 @@
 .Xdefaults
 .Xresources
 .atom
+.bash_profile
+.bashrc
 .cache
 .config/Atom/Cache
 .ecryptfs
 .esd_auth
 .fehbg
 .gitconfig
+.ipynb_checkpoints
 .ipython
+.jupyter
+.m2
 .maxima
 .minecraft
 .npm
@@ -18,6 +23,7 @@
 .opam
 .pam_environment
 .pki
+.pyxbld
 .rustup
 .sage
 .sqlite_history
