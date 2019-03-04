@@ -1,1 +1,2 @@
+export HISTFILE="$HOME/.local/share/bash/history"
 alias ls='ls --color'
