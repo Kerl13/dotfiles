@@ -172,9 +172,9 @@ bar {
         background #002028
     }
 
-	strip_workspace_numbers yes
-	position top
-	font pango:DejaVu Sans Mono, Icons 9
+    strip_workspace_numbers yes
+    position top
+    font pango:DejaVu Sans Mono, Icons 9
     status_command py3status
     separator_symbol " | "
 }
