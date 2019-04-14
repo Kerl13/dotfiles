@@ -1,0 +1,4 @@
+#!/bin/sh
+
+sudo wifi off
+systemctl --user stop syncthing.service

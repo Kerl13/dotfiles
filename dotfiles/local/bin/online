@@ -1,0 +1,4 @@
+#!/bin/sh
+
+sudo wifi on
+systemctl --user start syncthing.service
