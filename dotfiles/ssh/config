@@ -5,7 +5,7 @@ Host arepa
     User martin
 
 Host chyper
-    HostName wkerl.me
+    HostName chyper.wkerl.me
     IdentityFile ~/.ssh/chyper
     User martin
 
@@ -18,6 +18,11 @@ Host sage
     HostName trac.sagemath.org
     IdentityFile ~/.ssh/sage
     User git
+
+Host infomaniak
+    HostName g91kt.ftp.infomaniak.com
+    IdentityFile ~/.ssh/infomaniak
+    User g91kt_kerl
 
 
 # ---
