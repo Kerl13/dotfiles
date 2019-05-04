@@ -11,6 +11,8 @@
 .esd_auth
 .fehbg
 .gitconfig
+.ghc
+.ghc-mod
 .ipynb_checkpoints
 .ipython
 .jupyter
