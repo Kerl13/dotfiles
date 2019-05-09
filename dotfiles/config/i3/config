@@ -188,6 +188,7 @@ new_window pixel 1
 assign [class="Firefox"] $ws1
 assign [class="Telegram"] $ws2
 assign [class="Signal"] $ws2
+assign [class="Mattermost"] $ws2
 assign [class="Thunderbird"] $ws3
 assign [class="Atom"] $ws10
 
