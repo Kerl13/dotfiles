@@ -44,5 +44,6 @@ host_cmd () {
 feh --bg-scale "$HOME/pics/wallpaper.png"
 setxkbmap fr oss
 setxkbmap -option 'caps:swapescape'
+xmodmap -e 'keycode 61 = exclam backslash exclam backslash exclamdown U2212 exclamdown U2212'
 host_cmd 'aji' 'nm-applet' &
 i3
