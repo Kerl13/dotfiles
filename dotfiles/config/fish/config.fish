@@ -2,7 +2,7 @@
 if status is-login
     if test -z "$DISPLAY"
         if test (whoami) = cata
-            startx -- -keeptty; exit
+            startx -- -keeptty; exec /bin/true
         else if $XDG_VTNR
             startx -- -keeptty
         end
