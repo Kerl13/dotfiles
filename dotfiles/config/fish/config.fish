@@ -10,7 +10,9 @@ if status is-login
 end
 
 # OPAM configuration
-eval (opam env | grep -v MANPATH) >/dev/null 2>&1 || true
+if test -e $HOME/.opam
+    eval (opam env | grep -v MANPATH) >/dev/null 2>&1 || true
+end
 
 # Add $HOME/.local/bin to PATH
 set -gx PATH "$HOME/.local/bin" $PATH
