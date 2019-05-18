@@ -7,7 +7,7 @@ end
 
 
 # OPAM configuration
-. /home/martin/.opam/opam-init/init.fish > /dev/null 2> /dev/null or true
+eval (opam env | grep -v MANPATH)
 
 # Add $HOME/.local/bin to PATH
 set -gx PATH "$HOME/.local/bin" $PATH
