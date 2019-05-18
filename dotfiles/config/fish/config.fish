@@ -1,10 +1,13 @@
 # Start X at login
 if status is-login
-    if test -z "$DISPLAY" -a $XDG_VTNR = 1
-        startx -- -keeptty
+    if test -z "$DISPLAY"
+        if test (whoami) = cata
+            startx -- -keeptty; exit
+        else if $XDG_VTNR
+            startx -- -keeptty
+        end
     end
 end
-
 
 # OPAM configuration
 eval (opam env | grep -v MANPATH)
