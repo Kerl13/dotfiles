@@ -12,11 +12,5 @@ end
 # OPAM configuration
 if test -e $HOME/.opam
     eval (opam env | grep -v MANPATH) >/dev/null 2>&1 || true
+    set -gx MANPATH ":$OPAM_SWITCH_PREFIX/man"
 end
-
-# Add $HOME/.local/bin to PATH
-set -gx PATH "$HOME/.local/bin" $PATH
-set -gx VISUAL vim
-set -gx EDITOR vim
-set -gx LESSHISTFILE '-'
-set -U fish_greeting ''
