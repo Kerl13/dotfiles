@@ -1,5 +1,8 @@
 [user]
 	name = Martin Pépin
 	email = kerl@wkerl.me
+	signingkey = E7520278B1774448
 [core]
     editor = /usr/bin/vim
+[commit]
+	gpgsign = true
