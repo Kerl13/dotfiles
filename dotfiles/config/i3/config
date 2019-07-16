@@ -190,6 +190,7 @@ assign [class="Telegram"] $ws2
 assign [class="Signal"] $ws2
 assign [class="Mattermost"] $ws2
 assign [class="Thunderbird"] $ws3
+assign [class="Zotero"] $ws7
 assign [class="Atom"] $ws10
 
 bindsym $mod+Escape exec i3lock -c 002b36
