@@ -1,0 +1,9 @@
+[profiles]
+  [[default]]
+    show_titlebar = false
+    borderless = true
+    hide_tabbar = true
+    background_type = transparent
+    background_darkness = 0.5
+    disable_real_transparency = true
+    scrollbar_position = disabled
