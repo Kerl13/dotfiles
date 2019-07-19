@@ -37,3 +37,6 @@ default_height = 30
 
 [[layers]]
 name = "lang#ocaml"
+
+[[layers]]
+name = "lang#latex"
