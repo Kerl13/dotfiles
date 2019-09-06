@@ -73,6 +73,10 @@ Host pei
     HostName pei2.ens.fr
     IdentityFile ~/.ssh/ens
 
+Host phare
+    User mpepin
+    HostName phare.normalesup.org
+
 # ---
 # Git
 # ---
