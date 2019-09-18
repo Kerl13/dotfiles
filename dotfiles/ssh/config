@@ -91,6 +91,11 @@ Host github
     HostName github.com
     IdentityFile ~/.ssh/github
 
+Host github303
+    User git
+    HostName github.com
+    IdentityFile ~/.ssh/github303
+
 Host gist.github.com
     User git
     HostName gist.github.com
