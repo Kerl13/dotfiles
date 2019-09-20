@@ -29,6 +29,10 @@ Host infomaniak
 # LIP6
 # ---
 
+Host ppti-ens
+    HostName ssh-ens.ufr-info-p6.jussieu.fr
+    User pepin
+
 Host ppti
     HostName ssh.ufr-info-p6.jussieu.fr
     IdentityFile ~/.ssh/ppti
