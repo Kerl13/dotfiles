@@ -5,6 +5,6 @@
     hide_tabbar = true
     background_type = transparent
     background_darkness = 0.5
-    background_color = "#505050"
+    background_color = "#202020"
     disable_real_transparency = true
     scrollbar_position = disabled
