@@ -14,3 +14,6 @@ if test -e $HOME/.opam
     eval (opam env | grep -v MANPATH) >/dev/null 2>&1 || true
     set -gx MANPATH ":$OPAM_SWITCH_PREFIX/man"
 end
+
+# Autojump
+source /usr/share/autojump/autojump.fish
