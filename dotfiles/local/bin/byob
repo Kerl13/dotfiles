@@ -1,0 +1,3 @@
+#!/bin/sh
+
+"$HOME/git/les-boloss/byob/byob" "$@"
