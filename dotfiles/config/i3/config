@@ -169,7 +169,7 @@ set $mute_toggle pactl set-sink-mute 0 toggle
 
 bar {
     colors {
-        background #002028
+        background #353535
     }
 
     strip_workspace_numbers yes
