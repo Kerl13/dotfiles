@@ -1,14 +1,3 @@
-# Start X at login
-if status is-login
-    if test -z "$DISPLAY"
-        if test (whoami) = cata
-            startx -- -keeptty; exec /bin/true
-        else if test $XDG_VTNR = 1
-            startx -- -keeptty
-        end
-    end
-end
-
 # OPAM configuration
 if test -e $HOME/.opam
     eval (opam env | grep -v 'set -gx PATH ')
