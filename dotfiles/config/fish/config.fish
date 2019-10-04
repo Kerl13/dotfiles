@@ -16,4 +16,6 @@ if test -e $HOME/.opam
 end
 
 # Autojump
-source /usr/share/autojump/autojump.fish
+if command -v autojump 2>&1 >/dev/null
+    source /usr/share/autojump/autojump.fish
+end
