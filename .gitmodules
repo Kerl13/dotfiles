@@ -1,3 +1,6 @@
 [submodule "submodules/SpaceVim"]
 	path = submodules/SpaceVim
 	url = https://github.com/SpaceVim/SpaceVim
+[submodule "submodules/git-trac-command"]
+	path = submodules/git-trac-command
+	url = https://github.com/sagemath/git-trac-command
