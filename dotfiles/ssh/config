@@ -76,6 +76,7 @@ Host kde
     User kde
     HostName www.eleves.ens.fr
     IdentityFile ~/.ssh/ens
+    ProxyJump sas
 
 Host pei
     User mpepin
