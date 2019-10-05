@@ -72,6 +72,11 @@ Host wikis
     HostName www.eleves.ens.fr
     IdentityFile ~/.ssh/ens
 
+Host kde
+    User kde
+    HostName www.eleves.ens.fr
+    IdentityFile ~/.ssh/ens
+
 Host pei
     User mpepin
     HostName pei2.ens.fr
