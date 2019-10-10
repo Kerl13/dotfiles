@@ -43,3 +43,10 @@ name = "lang#latex"
 
 [[layers]]
 name = "lang#sage"
+
+[[layers]]
+name = "lang#cython"
+
+[[layers]]
+name = "lang#python"
+format_on_save = 1
