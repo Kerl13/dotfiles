@@ -40,3 +40,6 @@ name = "lang#ocaml"
 
 [[layers]]
 name = "lang#latex"
+
+[[layers]]
+name = "lang#sage"
