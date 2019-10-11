@@ -49,4 +49,3 @@ name = "lang#cython"
 
 [[layers]]
 name = "lang#python"
-format_on_save = 1
