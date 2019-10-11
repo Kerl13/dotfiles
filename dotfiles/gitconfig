@@ -8,3 +8,4 @@
 	gpgsign = true
 [alias]
 	diffstaged = diff --staged
+	unadd = restore --staged
