@@ -5,7 +5,5 @@ function! kerl#fix_long_line_hl()
 endfunction
 
 function! kerl#after() abort
-  call kerl#fix_long_line_hl()
-
   nnoremap <Space><Space>m :make<CR>
 endfunction
