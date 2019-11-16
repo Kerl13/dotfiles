@@ -46,4 +46,5 @@ setxkbmap fr oss
 setxkbmap -option 'caps:swapescape'
 xmodmap -e 'keycode 61 = exclam backslash exclam backslash exclamdown U2212 exclamdown U2212'
 host_cmd 'aji' 'nm-applet' &
+export TZ="Asia/Taipei"
 TERMINAL=terminator i3
