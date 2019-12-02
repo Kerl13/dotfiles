@@ -55,7 +55,7 @@ Host sphinx
 
 Host natalie
     User admin
-    HostName 129.199.146.97
+    HostName 129.199.146.175
 
 Host sas
     User mpepin
