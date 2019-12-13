@@ -50,3 +50,6 @@ name = "lang#cython"
 
 [[layers]]
 name = "lang#python"
+
+[[layers]]
+name = "lang#c"
