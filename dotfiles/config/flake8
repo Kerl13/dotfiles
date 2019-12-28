@@ -1,0 +1,11 @@
+# vim: set filetype=config :
+
+[flake8]
+max-line-length = 88
+ignore =
+  # whitespace before ':' (not PEP8-compliant for slicing)
+  E203,
+  # lambda expression
+  E731,
+  # line break before binary operator (not PEP8-compliant)
+  W503
