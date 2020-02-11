@@ -42,9 +42,6 @@ host_cmd () {
 
 
 feh --bg-scale "$HOME/pics/wallpaper.png"
-setxkbmap fr oss
-setxkbmap -option 'ctrl:nocaps'
-xcape -e 'Control_L=Escape'
-xmodmap -e 'keycode 61 = exclam backslash exclam backslash exclamdown U2212 exclamdown U2212'
+"$HOME/.local/bin/xkbswitch" set kerl
 host_cmd 'aji' 'nm-applet' &
 TERMINAL=terminator i3
