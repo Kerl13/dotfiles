@@ -42,6 +42,6 @@ host_cmd () {
 
 
 feh --bg-scale "$HOME/pics/wallpaper.png"
-"$HOME/.local/bin/xkbswitch" set kerl
+"$HOME/.local/bin/xkbswitch" set custom
 host_cmd 'aji' 'nm-applet' &
 TERMINAL=terminator i3
