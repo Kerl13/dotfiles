@@ -26,7 +26,7 @@ class Py3status:
 
     def _get_layout(self):
         layout = self.xkbs.get()
-        self.full_text = f"layout: {layout}"
+        self.full_text = f": {layout}"
 
     def click_info(self):
         return {

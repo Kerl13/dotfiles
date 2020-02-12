@@ -14,7 +14,7 @@ set_xkb_pref () {
   setxkbmap fr oss
   setxkbmap -option  # reset all options
   case "$1" in
-    "kerl")
+    "custom")
       setxkbmap -option 'ctrl:nocaps'
       xcape -e 'Control_L=Escape'
       # Shift+! = \
@@ -41,9 +41,9 @@ get_xkb_pref () {
 
 next_xkb_pref () {
   case "$(get_xkb_pref)" in
-    "kerl") echo "fr oss" ;;
-    "fr oss") echo "kerl" ;;
-    "*") echo "kerl";;
+    "custom") echo "fr oss" ;;
+    "fr oss") echo "custom" ;;
+    "*") echo "custom";;
   esac
 }
 
