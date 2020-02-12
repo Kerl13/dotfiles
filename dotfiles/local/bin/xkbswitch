@@ -13,12 +13,21 @@ RUNTIME_VAR="$RUNTIME_DIR/xkb_current"
 set_xkb_pref () {
   setxkbmap fr oss
   setxkbmap -option  # reset all options
+  killall xcape 2>/dev/null || true
   case "$1" in
     "custom")
       setxkbmap -option 'ctrl:nocaps'
-      xcape -e 'Control_L=Escape'
+      xcape -t 300 -e 'Control_L=Escape'
       # Shift+! = \
       xmodmap -e 'keycode 61 = exclam backslash exclam backslash exclamdown U2212 exclamdown U2212'
+      # Tab+hjkl = arrow keys
+      xmodmap -e 'keycode 23 = Mode_switch ISO_Left_Tab Tab ISO_Left_Tab Tab ISO_Left_Tab'
+      xmodmap -e 'keycode any = Tab'
+      xcape -t 300 -e 'Mode_switch=Tab'
+      xmodmap -e 'keycode  43 = h H Left H eth ETH eth ETH'
+      xmodmap -e 'keycode  44 = j J Down J udiaeresis Udiaeresis udiaeresis Udiaeresis'
+      xmodmap -e 'keycode  45 = k K Up K idiaeresis Idiaeresis idiaeresis Idiaeresis'
+      xmodmap -e 'keycode  46 = l L Right L U0140 U013F U0140 U013F'
       ;;
     "fr oss")
       ;;
