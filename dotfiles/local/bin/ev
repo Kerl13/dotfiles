@@ -3,7 +3,7 @@
 if [ "$#" = 0 ]; then
   nb_candidates="$(find . -maxdepth 1 -type f -name \*.pdf | wc -l)"
   if [ "$nb_candidates" = 1 ]; then
-    evince ./*.pdf >/dev/null 2>&1 &
+    mupdf ./*.pdf >/dev/null 2>&1 &
     disown
   else
     echo "too many pdf files"
