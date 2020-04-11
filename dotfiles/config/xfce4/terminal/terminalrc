@@ -26,8 +26,8 @@ MiscUseShiftArrowsToScroll=FALSE
 MiscSlimTabs=FALSE
 MiscNewTabAdjacent=FALSE
 MiscSearchDialogOpacity=100
-MiscShowUnsafePasteDialog=TRUE
+MiscShowUnsafePasteDialog=FALSE
 ScrollingLines=10000
-ScrollingBar=TERMINAL_SCROLLBAR_NONE
 ColorBackground=#202020202020
+ScrollingBar=TERMINAL_SCROLLBAR_NONE
 
