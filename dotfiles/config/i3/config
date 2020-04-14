@@ -177,7 +177,11 @@ bar {
     font pango:DejaVu Sans Mono, Icons 9
     status_command py3status
     separator_symbol " | "
+
+    modifier none
 }
+
+bindsym $mod+b bar mode toggle
 
 bindsym XF86AudioRaiseVolume exec $volume_inc
 bindsym XF86AudioLowerVolume exec $volume_dec
