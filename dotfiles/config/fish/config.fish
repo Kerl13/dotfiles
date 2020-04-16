@@ -11,8 +11,8 @@ end
 
 # OPAM configuration
 if test -e $HOME/.opam
-    eval (opam env | grep -v MANPATH) >/dev/null 2>&1 || true
-    set -gx MANPATH ":$OPAM_SWITCH_PREFIX/man"
+    eval (opam env | grep -v 'set -gx PATH ')
+    eval (opam env | grep 'set -gx PATH ' | sed 's/://')
 end
 
 # Autojump
