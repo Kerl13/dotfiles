@@ -1,0 +1,17 @@
+#!/bin/sh
+
+
+LANG=EN_us sink_name="$(pactl info | grep '^Default Sink:' | cut -d' ' -f3)"
+sink_id="$(pactl list short | grep "${sink_name}[^.]" | cut -d"$(printf '\t')" -f1)"
+
+if [ $# -ne 1 ]; then
+  echo "usage: $0 {up,down,mute}"
+  exit 1
+fi
+
+case "$1" in
+  up) pactl -- set-sink-volume "$sink_id" "+3%"; ;;
+  down) pactl -- set-sink-volume "$sink_id" "-3%"; ;;
+  mute) pactl -- set-sink-mute "$sink_id" toggle; ;;
+  *) echo "usage: $0 {up,down,mute}"; exit 1; ;;
+esac
