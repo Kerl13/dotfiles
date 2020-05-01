@@ -48,6 +48,10 @@ Host sphinx
     IdentityFile ~/.ssh/lip6
     User pepin
 
+Host big
+    HostName big.lip6.fr
+    IdentityFile ~/.ssh/lip6
+    User pepin
 
 # ---
 # ENS
