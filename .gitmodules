@@ -4,3 +4,6 @@
 [submodule "submodules/git-trac-command"]
 	path = submodules/git-trac-command
 	url = https://github.com/sagemath/git-trac-command
+[submodule "submodules/screenshot"]
+	path = submodules/screenshot
+	url = https://gist.github.com/Niols/8c60eb687c6c0d2beab1ae3ec302bfc2
