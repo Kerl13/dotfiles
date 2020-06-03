@@ -21,12 +21,34 @@ set_xkb_pref () {
       xcape -t 200 -e 'Control_L=Escape'
       # Shift+! = \
       xmodmap -e 'keycode 61 = exclam backslash exclam backslash exclamdown U2212 exclamdown U2212'
-      # ² + hjkl = arrow keys
+      # Set Mode_switch
       xmodmap -e 'keycode 49 = Mode_switch'
-      xmodmap -e 'keycode 43 = h H Left H eth ETH eth ETH'
-      xmodmap -e 'keycode 44 = j J Down J udiaeresis Udiaeresis udiaeresis Udiaeresis'
-      xmodmap -e 'keycode 45 = k K Up K idiaeresis Idiaeresis idiaeresis Idiaeresis'
-      xmodmap -e 'keycode 46 = l L Right L U0140 U013F U0140 U013F'
+      xmodmap -e 'keycode 135 = Mode_switch NoSymbol Mode_switch NoSymbol Mode_switch'
+      # Remap Mode_switch + hjkl and Mode_switch + esdf to arrow keys
+      xmodmap -e 'keycode 43 = h H Left Left eth ETH eth ETH'
+      xmodmap -e 'keycode 39 = s S Left Left ssharp doublelowquotemark ssharp doublelowquotemark s S ssharp doublelowquotemark'
+      xmodmap -e 'keycode 44 = j J Down Down udiaeresis Udiaeresis udiaeresis Udiaeresis'
+      xmodmap -e 'keycode 40 = d D Down Down ediaeresis Ediaeresis ediaeresis Ediaeresis d D ediaeresis Ediaeresis'
+      xmodmap -e 'keycode 45 = k K Up Up idiaeresis Idiaeresis idiaeresis Idiaeresis'
+      xmodmap -e 'keycode 26 = e E Up Up EuroSign cent EuroSign cent e E EuroSign cent e E EuroSign cent'
+      xmodmap -e 'keycode 46 = l L Right Right U0140 U013F U0140 U013F'
+      xmodmap -e 'keycode 41 = f F Right Right leftsinglequotemark singlelowquotemark leftsinglequotemark singlelowquotemark f F leftsinglequotemark singlelowquotemark f F leftsinglequotemark singlelowquotemark'
+      # Mode_switch + Backspace = Delete
+      xmodmap -e 'keycode  22 = BackSpace BackSpace Delete Delete BackSpace BackSpace'
+      # Mode + number = Function keys
+      xmodmap -e 'keycode 10 = ampersand 1 F1 1 dead_caron dead_ogonek dead_caron dead_ogonek ampersand 1 dead_caron dead_ogonek ampersand 1 dead_caron dead_ogonek'
+      xmodmap -e 'keycode 11 = eacute 2 F2 2 asciitilde Eacute asciitilde Eacute eacute 2 asciitilde Eacute eacute 2 asciitilde Eacute'
+      xmodmap -e 'keycode 12 = quotedbl 3 F3 3 numbersign dead_breve numbersign dead_breve quotedbl 3 numbersign dead_breve quotedbl 3 numbersign dead_breve'
+      xmodmap -e 'keycode 13 = apostrophe 4 F4 4 braceleft U2014 braceleft U2014 apostrophe 4 braceleft U2014 apostrophe 4 braceleft U2014'
+      xmodmap -e 'keycode 14 = parenleft 5 F5 5 bracketleft U2013 bracketleft U2013 parenleft 5 bracketleft U2013 parenleft 5 bracketleft U2013'
+      xmodmap -e 'keycode 15 = minus 6 F6 6 bar U2011 bar U2011 minus 6 bar U2011 minus 6 bar U2011'
+      xmodmap -e 'keycode 16 = egrave 7 F7 7 grave Egrave grave Egrave egrave 7 grave Egrave egrave 7 grave Egrave'
+      xmodmap -e 'keycode 17 = underscore 8 F8 8 backslash trademark backslash trademark underscore 8 backslash trademark underscore 8 backslash trademark'
+      xmodmap -e 'keycode 18 = ccedilla 9 F9 9 asciicircum Ccedilla asciicircum Ccedilla ccedilla 9 asciicircum Ccedilla ccedilla 9 asciicircum Ccedilla'
+      xmodmap -e 'keycode 19 = agrave 0 F10 0 at Agrave at Agrave agrave 0 at Agrave agrave 0 at Agrave'
+      xmodmap -e 'keycode 20 = parenright degree F11 degree bracketright notequal bracketright notequal parenright degree bracketright notequal parenright degree bracketright notequal'
+      xmodmap -e 'keycode 21 = equal plus F12 plus braceright plusminus braceright plusminus equal plus braceright plusminus equal plus braceright plusminus'
+      # TODO: VT console switch
       ;;
     "fr oss")
       ;;
