@@ -16,14 +16,18 @@ set_xkb_pref () {
   killall xcape 2>/dev/null || true
   case "$1" in
     "custom")
-      # remap capslock to Control/Escape
+      # Remap capslock to Control_L
       setxkbmap -option 'ctrl:nocaps'
-      xcape -t 200 -e 'Control_L=Escape'
       # Shift+! = \
       xmodmap -e 'keycode 61 = exclam backslash exclam backslash exclamdown U2212 exclamdown U2212'
-      # Set Mode_switch
-      xmodmap -e 'keycode 49 = Mode_switch'
-      xmodmap -e 'keycode 135 = Mode_switch NoSymbol Mode_switch NoSymbol Mode_switch'
+      # Set Mode_switch / Escape / Control_L
+      xmodmap -e 'keycode 49 = Mode_switch NoSymbol Mode_switch' # Menu
+      xmodmap -e 'keycode 135 = Mode_switch NoSymbol Mode_switch' # ²
+      xmodmap -e 'keycode 9 = Mode_switch NoSymbol Mode_switch' # escape
+      xmodmap -e 'keycode 37 = Escape NoSymbol Escape' # Control_L
+      # A short Control_L/Mode_switch = Escape
+      xcape -t 150 -e 'Control_L=Escape'
+      xcape -t 150 -e 'Mode_switch=Escape'
       # Remap Mode_switch + hjkl and Mode_switch + esdf to arrow keys
       xmodmap -e 'keycode 43 = h H Left Left eth ETH eth ETH'
       xmodmap -e 'keycode 39 = s S Left Left ssharp doublelowquotemark ssharp doublelowquotemark s S ssharp doublelowquotemark'
