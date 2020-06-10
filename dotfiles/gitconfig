@@ -9,3 +9,5 @@
 [alias]
 	diffstaged = diff --staged
 	unadd = restore --staged
+[pull]
+	ff = only
