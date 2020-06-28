@@ -192,6 +192,7 @@ assign [class="Telegram"] $ws2
 assign [class="Signal"] $ws2
 assign [class="Mattermost"] $ws2
 assign [class="discord"] $ws2
+assign [class="Riot"] $ws2
 assign [class="Thunderbird"] $ws3
 assign [class="Zotero"] $ws7
 assign [class="Atom"] $ws10
