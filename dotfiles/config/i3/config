@@ -180,6 +180,7 @@ bar {
 bindsym $mod+b bar mode toggle
 bindsym $mod+p exec screenshot.sh
 bindsym $mod+Shift+p exec screenshot.sh --select
+bindsym $mod+u exec --no-startup-id rofimoji --copy-only
 
 bindsym XF86AudioRaiseVolume exec volume up
 bindsym XF86AudioLowerVolume exec volume down
