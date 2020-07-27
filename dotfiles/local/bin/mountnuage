@@ -1,0 +1,7 @@
+#!/bin/sh
+
+set -euC
+
+cd "$HOME"
+sudo mount -t davfs https://nuage.lip6.fr/remote.php/dav/files/pepin nuage
+sudo chown -R martin:martin nuage
