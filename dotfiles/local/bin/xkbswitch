@@ -23,19 +23,14 @@ set_xkb_pref () {
       xmodmap -e 'keycode 49 = Mode_switch NoSymbol Mode_switch' # Menu
       xmodmap -e 'keycode 135 = Mode_switch NoSymbol Mode_switch' # ²
       xmodmap -e 'keycode 9 = Mode_switch NoSymbol Mode_switch' # escape
-      # xmodmap -e 'keycode 37 = Escape NoSymbol Escape' # Control_L
-      # A short Control_L/Mode_switch = Escape
-      # xcape -t 150 -e 'Control_L=Escape'
-      # xcape -t 150 -e 'Mode_switch=Escape'
-      # Remap Mode_switch + hjkl and Mode_switch + esdf to arrow keys
+      # Remap Mod_switch + np to Page{Up,Down}
+      xmodmap -e 'keycode 33 = p P Prior Prior ocircumflex Ocircumflex ocircumflex Ocircumflex p P ocircumflex Ocircumflex p P ocircumflex Ocircumflex'
+      xmodmap -e 'keycode 57 = n N Next Next notsign rightarrow notsign rightarrow n N notsign rightarrow n N notsign rightarrow'
+      # Remap Mode_switch + hjkl to arrow keys
       xmodmap -e 'keycode 43 = h H Left Left eth ETH eth ETH'
-      xmodmap -e 'keycode 39 = s S Left Left ssharp doublelowquotemark ssharp doublelowquotemark s S ssharp doublelowquotemark'
       xmodmap -e 'keycode 44 = j J Down Down udiaeresis Udiaeresis udiaeresis Udiaeresis'
-      xmodmap -e 'keycode 40 = d D Down Down ediaeresis Ediaeresis ediaeresis Ediaeresis d D ediaeresis Ediaeresis'
       xmodmap -e 'keycode 45 = k K Up Up idiaeresis Idiaeresis idiaeresis Idiaeresis'
-      xmodmap -e 'keycode 26 = e E Up Up EuroSign cent EuroSign cent e E EuroSign cent e E EuroSign cent'
       xmodmap -e 'keycode 46 = l L Right Right U0140 U013F U0140 U013F'
-      xmodmap -e 'keycode 41 = f F Right Right leftsinglequotemark singlelowquotemark leftsinglequotemark singlelowquotemark f F leftsinglequotemark singlelowquotemark f F leftsinglequotemark singlelowquotemark'
       # Mode_switch + Backspace = Delete
       xmodmap -e 'keycode  22 = BackSpace BackSpace Delete Delete BackSpace BackSpace'
       # Mode + number = Function keys
