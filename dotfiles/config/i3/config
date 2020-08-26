@@ -201,4 +201,5 @@ assign [class="Atom"] $ws10
 bindsym --release $mod+Escape exec slock
 
 bindsym $mod+Next move workspace to output right
+bindsym $mod+n move workspace to output right
 bindsym $mod+Prior move workspace to output left
