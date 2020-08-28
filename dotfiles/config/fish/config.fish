@@ -26,3 +26,6 @@ if test -n "$DISPLAY"
     lsd  $argv;
   end
 end
+
+# https://github.com/pypa/pip/issues/7883
+set -gx PYTHON_KEYRING_BACKEND keyring.backends.null.Keyring
