@@ -9,4 +9,12 @@ function! kerl#before() abort
   let g:vimtex_view_method = 'mupdf'
   let g:vimtex_quickfix_method = 'pplatex'
   let g:neomake_tex_enabled_makers = ['proselint', 'chktex']
+
+  " Python stuff
+  let g:neomake_python_isort_maker = {
+        \ 'exe': 'isort',
+        \ 'args': ['--check'],
+        \ 'errorformat': 'ERROR: %f %m',
+        \ }
+  let g:neomake_python_enabled_makers = ['flake8', 'isort']
 endfunction
