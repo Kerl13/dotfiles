@@ -3,7 +3,7 @@ if status is-login
     if test -z "$DISPLAY"
         if test (whoami) = cata
             startx -- -keeptty; exec /bin/true
-        else if test $XDG_VTNR = 1
+        else if test "_$XDG_VTNR" = "_1"
             startx -- -keeptty
         end
     end

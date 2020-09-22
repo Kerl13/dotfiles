@@ -60,7 +60,4 @@ name = "lang#c"
 name = "lang#rust"
 
 [[layers]]
-name = "lang#haskell"
-
-[[layers]]
 name = "git"
