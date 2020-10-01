@@ -1,6 +1,6 @@
 #!/bin/sh
 
-PDF_VIEWER=mupdf
+PDF_VIEWER='mupdf -C FFFAF0'
 
 if [ "$#" = 0 ]; then
   nb_candidates="$(find . -maxdepth 1 -type f -name \*.pdf | wc -l)"
