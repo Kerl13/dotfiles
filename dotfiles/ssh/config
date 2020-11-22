@@ -58,6 +58,10 @@ Host big
     IdentityFile ~/.ssh/lip6
     User pepin
 
+Host pandora
+    HostName 132.227.85.138
+    User martin
+
 # ---
 # ENS
 # ---
