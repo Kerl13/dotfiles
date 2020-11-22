@@ -1,7 +1,19 @@
 #!/bin/sh
 
+set -uC
+
 if [ "$(hostname)" = ChambreHyperbare ]; then
   exec screen -rd irc
 else
+  if command -v xdotool >/dev/null; then
+    readonly IRC_WINDOW="$(xdotool getactivewindow)"
+    readonly OLD_WINDOW_NAME="$(xdotool getwindowname "$IRC_WINDOW")"
+    xdotool set_window -name IRC "$IRC_WINDOW"
+  fi
+
   ssh chyper -t irc
+
+  if [ "_$OLD_WINDOW_NAME" != _ ]; then
+    xdotool set_window -name "$OLD_WINDOW_NAME" "$IRC_WINDOW"
+  fi
 fi
