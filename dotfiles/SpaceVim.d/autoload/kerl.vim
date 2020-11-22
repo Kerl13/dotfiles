@@ -14,7 +14,7 @@ function! kerl#before() abort
   " LaTeX stuff
   let g:vimtex_view_method = 'mupdf'
   let g:vimtex_quickfix_method = 'pplatex'
-  let g:neomake_tex_enabled_makers = ['proselint', 'chktex']
+  let g:neomake_tex_enabled_makers = ['chktex']
 
   " Python stuff
   let g:neomake_python_isort_maker = {
@@ -31,4 +31,6 @@ function! kerl#before() abort
   nnoremap <C-j> <C-w>j
   nnoremap <C-k> <C-w>k
   nnoremap <C-l> <C-w>l
+
+  nnoremap <Space>lw :!i3-msg resize shrink width 85px<CR>
 endfunction

@@ -39,6 +39,9 @@ default_position = 'top'
 default_height = 30
 
 [[layers]]
+name = "lang#javascript"
+
+[[layers]]
 name = "lang#ocaml"
 
 [[layers]]
@@ -61,3 +64,4 @@ name = "lang#rust"
 
 [[layers]]
 name = "git"
+git-plugin = "gina"
