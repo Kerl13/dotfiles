@@ -178,8 +178,8 @@ bar {
 }
 
 bindsym $mod+b bar mode toggle
-bindsym $mod+p exec screenshot.sh
-bindsym $mod+Shift+p exec screenshot.sh --select
+bindsym $mod+p exec sh ~/.local/bin/screenshot.sh
+bindsym $mod+Shift+p exec sh ~/.local/bin/screenshot.sh --select
 bindsym $mod+u exec --no-startup-id rofimoji --copy-only
 
 bindsym XF86AudioRaiseVolume exec volume up
@@ -202,4 +202,5 @@ bindsym --release $mod+Escape exec slock
 
 bindsym $mod+Next move workspace to output right
 bindsym $mod+n move workspace to output right
+bindsym $mod+Shift+n move workspace to output down
 bindsym $mod+Prior move workspace to output left
