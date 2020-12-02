@@ -15,11 +15,6 @@ if test -e $HOME/.opam
     eval (opam env | grep 'set -gx PATH ' | sed 's/://')
 end
 
-# Autojump
-if command -v autojump 2>&1 >/dev/null
-    source /usr/share/autojump/autojump.fish
-end
-
 # Context-dependent definition of ls
 if test -n "$DISPLAY"
   function ls --description 'alias ls=lsd'
