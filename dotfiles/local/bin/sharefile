@@ -1,0 +1,17 @@
+#!/bin/sh
+
+set -euC
+
+if [ "$#" != 1 ]; then
+  printf 'usage: %s FILE\n' "$0" >&2
+  exit 1
+fi
+
+if [ ! -f "$1" ]; then
+  printf '%s is not a file or does not exist\n' "$1" >&2
+  exit 1
+fi
+
+readonly url="$(curl -F"file=@${1}" https://0x0.st)"
+printf '%s' "$url" | xclip -i -selection clipboard
+echo "share link: '$url' (copied to clipboard)"
