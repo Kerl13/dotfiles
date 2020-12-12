@@ -1,0 +1,15 @@
+#!/bin/sh
+
+set -euC
+
+if command -v xdotool >/dev/null; then
+  readonly THIS_WINDOW="$(xdotool getactivewindow)"
+  readonly OLD_WINDOW_NAME="$(xdotool getwindowname "$THIS_WINDOW")"
+  xdotool set_window -name WeeChat "$THIS_WINDOW"
+fi
+
+/usr/bin/weechat "$@"
+
+if [ "_$OLD_WINDOW_NAME" != _ ]; then
+  xdotool set_window -name "$OLD_WINDOW_NAME" "$THIS_WINDOW"
+fi
