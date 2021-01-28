@@ -6,6 +6,7 @@ endfunction
 
 function! kerl#before() abort
   autocmd BufRead,BufNewFile,BufFilePre dune setfiletype dune
+  autocmd BufRead,BufNewFile,BufFilePre *.h setfiletype c
   autocmd BufRead,BufNewFile /etc/nginx/*,/usr/local/nginx/conf/* if &ft == '' | setfiletype nginx | endif
   autocmd BufRead,BufNewFile latexmkrc setfiletype perl
 
