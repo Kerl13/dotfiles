@@ -44,5 +44,9 @@ host_cmd () {
 "$HOME/.local/bin/xkbswitch" set custom
 host_cmd 'aji' 'nm-applet' &
 host_cmd 'pandora' 'xrandr --output DP-2 --mode 2560x1440 --output DVI-I-1-1 --primary --left-of DP-2 --mode 1920x1200'
-feh --bg-scale "$HOME/pics/wallpaper.png"
+if [ -x "$HOME/.fehbg" ]; then
+  "$HOME/.fehbg"
+else
+  feh --bg-fill "$HOME/pics/wallpaper.png"
+fi
 TERMINAL=xfce4-terminal i3
