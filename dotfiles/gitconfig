@@ -11,3 +11,5 @@
 	unadd = restore --staged
 [pull]
 	ff = only
+[init]
+	defaultBranch = main
