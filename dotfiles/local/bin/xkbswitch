@@ -23,9 +23,9 @@ set_xkb_pref () {
       xmodmap -e 'keycode 49 = Mode_switch NoSymbol Mode_switch' # Menu
       xmodmap -e 'keycode 135 = Mode_switch NoSymbol Mode_switch' # ²
       xmodmap -e 'keycode 9 = Mode_switch NoSymbol Mode_switch' # escape
-      # Remap Mod_switch + np to Page{Up,Down}
-      xmodmap -e 'keycode 33 = p P Prior Prior ocircumflex Ocircumflex ocircumflex Ocircumflex p P ocircumflex Ocircumflex p P ocircumflex Ocircumflex'
-      xmodmap -e 'keycode 57 = n N Next Next notsign rightarrow notsign rightarrow n N notsign rightarrow n N notsign rightarrow'
+      # Remap Mod_switch + ui to Page{Down,Up}
+      xmodmap -e 'keycode  30 = u U Next Next ucircumflex Ucircumflex ucircumflex Ucircumflex u U ucircumflex Ucircumflex u U ucircumflex Ucircumflex'
+      xmodmap -e 'keycode  31 = i I Prior Prior icircumflex Icircumflex icircumflex Icircumflex i I icircumflex Icircumflex i I icircumflex Icircumflex'
       # Remap Mode_switch + hjkl to arrow keys
       xmodmap -e 'keycode 43 = h H Left Left eth ETH eth ETH'
       xmodmap -e 'keycode 44 = j J Down Down udiaeresis Udiaeresis udiaeresis Udiaeresis'
