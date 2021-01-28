@@ -182,6 +182,10 @@ bindsym $mod+p exec sh ~/.local/bin/screenshot.sh
 bindsym $mod+Shift+p exec sh ~/.local/bin/screenshot.sh --select
 bindsym $mod+u exec --no-startup-id rofimoji --copy-only
 
+bindsym $mod+comma exec volume down
+bindsym $mod+semicolon exec volume up
+bindsym $mod+colon exec volume mute
+
 bindsym XF86AudioRaiseVolume exec volume up
 bindsym XF86AudioLowerVolume exec volume down
 bindsym XF86AudioMute exec volume mute
