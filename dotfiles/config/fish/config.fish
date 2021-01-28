@@ -13,6 +13,7 @@ end
 if test -e $HOME/.opam
     eval (opam env | grep -v 'set -gx PATH ')
     eval (opam env | grep 'set -gx PATH ' | sed 's/://')
+    export C_INCLUDE_PATH=(ocamlc -where)
 end
 
 # Context-dependent definition of ls
