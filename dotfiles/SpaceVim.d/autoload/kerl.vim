@@ -36,3 +36,21 @@ function! kerl#before() abort
 
   nnoremap <Space>lw :!i3-msg resize shrink width 85px<CR>
 endfunction
+
+function! kerl#after() abort
+  " Tree-sitter
+  lua << EOF
+  require'nvim-treesitter.configs'.setup {
+    highlight = { enable = true },
+    incremental_selection = {
+      enable = true,
+      keymaps = {
+        init_selection = "vv",
+        node_incremental = "v",
+        node_decremental = "V",
+        scope_incremental = "s",
+      }
+    }
+  }
+EOF
+endfunction

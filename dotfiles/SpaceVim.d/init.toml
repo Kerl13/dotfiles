@@ -24,8 +24,11 @@
     enable_tabline_filetype_icon = true
     enable_statusline_mode = false
     bootstrap_before = "kerl#before"
+    bootstrap_after = "kerl#after"
     # Vim compatibility
     windows_smartclose = false
+    # Disable expand-region since treesitter does a much better job
+    disabled_plugins = ["vim-expand-region"]
 
 # Enable autocomplete layer
 [[layers]]
@@ -65,3 +68,7 @@ name = "lang#rust"
 [[layers]]
 name = "git"
 git-plugin = "gina"
+
+[[custom_plugins]]
+  repo = "nvim-treesitter/nvim-treesitter"
+  merged = false
