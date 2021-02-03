@@ -36,8 +36,6 @@ function! kerl#before() abort
   nnoremap <C-j> <C-w>j
   nnoremap <C-k> <C-w>k
   nnoremap <C-l> <C-w>l
-
-  nnoremap <Space>lw :!i3-msg resize shrink width 85px<CR>
 endfunction
 
 function! kerl#after() abort
