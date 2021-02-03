@@ -15,6 +15,7 @@ function! kerl#before() abort
 
   " Prefer GB english over US english
   set spelllang=en_gb
+  set spell
 
   " LaTeX stuff
   let g:vimtex_view_method = 'mupdf'
