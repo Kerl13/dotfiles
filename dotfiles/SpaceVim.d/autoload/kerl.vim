@@ -13,6 +13,9 @@ function! kerl#before() abort
   let g:indentLine_setConceal = 0
   set textwidth=80
 
+  " Prefer GB english over US english
+  set spelllang=en_gb
+
   " LaTeX stuff
   let g:vimtex_view_method = 'mupdf'
   let g:vimtex_quickfix_method = 'pplatex'
