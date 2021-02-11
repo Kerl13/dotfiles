@@ -190,6 +190,8 @@ bindsym XF86AudioRaiseVolume exec volume up
 bindsym XF86AudioLowerVolume exec volume down
 bindsym XF86AudioMute exec volume mute
 
+bindsym $mod+exclam exec mike toggle
+
 new_window pixel 1
 
 assign [class="firefox"] $ws1
