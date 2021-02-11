@@ -15,20 +15,11 @@ function! kerl#before() abort
 
   " Prefer GB english over US english
   set spelllang=en_gb
-  set spell
 
   " LaTeX stuff
   let g:vimtex_view_method = 'mupdf'
   let g:vimtex_quickfix_method = 'pplatex'
   let g:neomake_tex_enabled_makers = ['chktex']
-
-  " Python stuff
-  let g:neomake_python_isort_maker = {
-        \ 'exe': 'isort',
-        \ 'args': ['--check'],
-        \ 'errorformat': 'ERROR: %f %m',
-        \ }
-  let g:neomake_python_enabled_makers = ['flake8', 'isort']
 
   " RandomSeed
   nnoremap <Space>is :call RandomSeed()<CR>
@@ -55,4 +46,12 @@ function! kerl#after() abort
     }
   }
 EOF
+
+  " Python stuff
+  let g:neomake_python_isort_maker = {
+        \ 'exe': 'isort',
+        \ 'args': ['--check'],
+        \ 'errorformat': 'ERROR: %f %m',
+        \ }
+  let g:neomake_python_enabled_makers = ['flake8', 'isort']
 endfunction
