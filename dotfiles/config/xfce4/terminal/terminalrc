@@ -15,7 +15,7 @@ MiscToolbarDefault=FALSE
 MiscConfirmClose=TRUE
 MiscCycleTabs=TRUE
 MiscTabCloseButtons=TRUE
-MiscTabCloseMiddleClick=TRUE
+MiscTabCloseMiddleClick=FALSE
 MiscTabPosition=GTK_POS_TOP
 MiscHighlightUrls=TRUE
 MiscMiddleClickOpensUri=FALSE
@@ -30,4 +30,7 @@ MiscShowUnsafePasteDialog=FALSE
 ScrollingLines=10000
 ColorBackground=#202020202020
 ScrollingBar=TERMINAL_SCROLLBAR_NONE
+ShortcutsNoHelpkey=TRUE
+ShortcutsNoMenukey=TRUE
+ShortcutsNoMnemonics=TRUE
 
