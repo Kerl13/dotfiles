@@ -54,4 +54,14 @@ EOF
         \ 'errorformat': 'ERROR: %f %m',
         \ }
   let g:neomake_python_enabled_makers = ['flake8', 'isort']
+
+  " unicode.vim
+  call SpaceVim#mapping#space#def('nmap', ['i', 'u'],
+    \ 'call kerl#unicode_search_bang()',
+    \ 'insert unicode glyph', 1)
+endfunction
+
+function! kerl#unicode_search_bang() abort
+  let name = input('search unicode glyph: ')
+  execute ':UnicodeSearch! ' . name
 endfunction
