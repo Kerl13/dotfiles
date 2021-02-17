@@ -20,9 +20,10 @@ set_xkb_pref () {
       # Shift+! = \
       xmodmap -e 'keycode 61 = exclam backslash exclam backslash exclamdown U2212 exclamdown U2212'
       # Set Mode_switch / Escape / Control_L
-      xmodmap -e 'keycode 49 = Mode_switch NoSymbol Mode_switch' # Menu
-      xmodmap -e 'keycode 135 = Mode_switch NoSymbol Mode_switch' # ²
+      xmodmap -e 'keycode 49 = Mode_switch NoSymbol Mode_switch' # ²
       xmodmap -e 'keycode 9 = Mode_switch NoSymbol Mode_switch' # escape
+      # Assign "window right" to the Menu key
+      xmodmap -e 'keycode 135 = Super_R NoSymbol Super_R NoSymbol Super_R Super_R'
       # Remap Mod_switch + ui to Page{Down,Up}
       xmodmap -e 'keycode  30 = u U Next Next ucircumflex Ucircumflex ucircumflex Ucircumflex u U ucircumflex Ucircumflex u U ucircumflex Ucircumflex'
       xmodmap -e 'keycode  31 = i I Prior Prior icircumflex Icircumflex icircumflex Icircumflex i I icircumflex Icircumflex i I icircumflex Icircumflex'
