@@ -29,6 +29,8 @@
     windows_smartclose = false
     # Disable expand-region since treesitter does a much better job
     disabled_plugins = ["vim-expand-region"]
+    # Disable changing directory automatically
+    project_rooter_automatically = 0
 
 # Enable autocomplete layer
 [[layers]]
