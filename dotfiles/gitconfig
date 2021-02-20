@@ -1,15 +1,15 @@
 [user]
-	name = Martin Pépin
-	email = kerl@wkerl.me
-	signingkey = E7520278B1774448
+  name = Martin Pépin
+  email = kerl@wkerl.me
+  signingkey = E7520278B1774448
 [core]
     editor = nvim
 [commit]
-	gpgsign = true
+  gpgsign = true
 [alias]
-	diffstaged = diff --staged
-	unadd = restore --staged
+  diffstaged = diff --staged
+  unadd = restore --staged
 [pull]
-	ff = only
+  ff = only
 [init]
-	defaultBranch = main
+  defaultBranch = main
