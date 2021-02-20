@@ -67,6 +67,12 @@ Host pandora
 # ENS
 # ---
 
+Host clubrz
+  HostName 129.199.146.230
+  Port 4022
+  User mpepin
+  IdentityFile ~/.ssh/ens
+
 Host natalie
     User admin
     HostName 129.199.146.175
