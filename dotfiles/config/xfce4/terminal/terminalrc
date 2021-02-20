@@ -28,9 +28,9 @@ MiscNewTabAdjacent=FALSE
 MiscSearchDialogOpacity=100
 MiscShowUnsafePasteDialog=FALSE
 ScrollingLines=10000
-ColorBackground=#202020202020
+ColorBackground=#181818181818
 ScrollingBar=TERMINAL_SCROLLBAR_NONE
+ShortcutsNoMnemonics=TRUE
 ShortcutsNoHelpkey=TRUE
 ShortcutsNoMenukey=TRUE
-ShortcutsNoMnemonics=TRUE
 
