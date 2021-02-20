@@ -33,12 +33,12 @@ colorscheme gruvbox
 call plug#begin(stdpath('data') . '/plugged')
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': 'TSUpdate'}
-Plug 'neoclide/coc.nvim', {'branch': 'release'},
-Plug 'lervag/vimtex',
-Plug 'ap/vim-buftabline',
-Plug 'scrooloose/nerdcommenter',
-Plug 'tpope/vim-repeat',
-Plug 'tpope/vim-surround',
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'lervag/vimtex'
+Plug 'ap/vim-buftabline'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
 
 call plug#end()
 
@@ -54,10 +54,6 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-
-" ---[ NERDCommenter configuration ]---
-
-let g:NERDSpaceDelims=1
 
 " ---[ Indentation ]---
 
