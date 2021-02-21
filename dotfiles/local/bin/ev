@@ -1,20 +1,46 @@
 #!/bin/sh
 
-PDF_VIEWER='mupdf -C FFFAF0'
+set -euC
 
-if [ "$#" = 0 ]; then
-  nb_candidates="$(find . -maxdepth 1 -type f -name \*.pdf | wc -l)"
-  if [ "$nb_candidates" = 0 ]; then
-    echo "no pdf file found"
-    exit 1
-  elif [ "$nb_candidates" = 1 ]; then
-    $PDF_VIEWER ./*.pdf >/dev/null &
-    disown
-  else
-    echo "too many pdf files"
-    exit 1
-  fi
-else
-  $PDF_VIEWER "$@" >/dev/null &
+view () {
+  # Change this line to customize the pdf viewer and its options.
+  mupdf -C FFFAF0 "$@" &
   disown
-fi
+}
+
+fail () {
+  printf '%s: %s %s\n' "$0" "$1" '🙁' >&2
+  exit 1
+}
+
+count_pdfs () {
+  find "$1" -maxdepth 1 -type f -name '*.pdf' | wc -l
+}
+
+run_on_folder () {
+  case "$(count_pdfs "$1")" in
+    1) view "$1"/*.pdf ;;
+    0) fail "no pdf file found in $1" ;;
+    *) fail "too many pdf files found in $1" ;;
+  esac
+}
+
+case $# in
+  0)
+    if [ "$(count_pdfs .)" = 0 ] && [ -d build ]; then
+      run_on_folder build
+    else
+      run_on_folder .
+    fi
+    ;;
+
+  1)
+    if [ -d "$1" ]; then
+      run_on_folder "$1"
+    else
+      view "$1"
+    fi
+    ;;
+
+  *) view "$@" ;;
+esac
