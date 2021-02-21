@@ -180,7 +180,7 @@ bar {
 bindsym $mod+b bar mode toggle
 bindsym $mod+p exec sh ~/.local/bin/screenshot.sh
 bindsym $mod+Shift+p exec sh ~/.local/bin/screenshot.sh --select
-bindsym $mod+u exec --no-startup-id rofimoji --copy-only
+bindsym $mod+u exec --no-startup-id rofimoji
 
 bindsym $mod+comma exec volume down
 bindsym $mod+semicolon exec volume up
