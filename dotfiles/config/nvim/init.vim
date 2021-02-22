@@ -27,7 +27,6 @@ let mapleader = " "
 let maplocalleader = " "
 
 colorscheme gruvbox
-let g:lightline = {'colorscheme': 'seoul256'}
 
 " ---[ Indentation ]---
 
@@ -97,6 +96,47 @@ lua <<EOF
      }
   )
 EOF
+
+" ---[ Lightline ]---
+
+let g:lightline = {
+  \'colorscheme': 'seoul256',
+  \'active':{
+  \  'left': [['mode', 'paste'],
+  \           ['readonly', 'filename', 'modified','lsp']]
+  \},
+  \'component_function': {'lsp': 'LspStatus'}
+  \}
+
+function! LspStatus() abort
+  let err = 0
+  let warn = 0
+  let info = 0
+  if luaeval('not vim.tbl_isempty(vim.lsp.buf_get_clients(0))')
+    let err = luaeval("vim.lsp.diagnostic.get_count(0, [[Error]])")
+    let warn = luaeval("vim.lsp.diagnostic.get_count(0, [[Warning]])")
+  else
+    let counts = ale#statusline#Count(bufnr(''))
+    let err = counts.error + counts.style_error
+    let warn = counts.warning + counts.style_warning
+    let info = counts.info
+  endif
+  let s = ''
+  if err > 0
+    let s .= 'E:' . err
+  endif
+  if warn > 0
+    let s .= ((s == '') ? '' : ' ') . 'W:' . warn
+  endif
+  if info > 0
+    let s .= ((s == '') ? '' : ' ') . 'I:' . info
+  endif
+  if s == ''
+    return '✔'
+  else
+    return s
+  endif
+endfunction
 
 " ---[ Ultisnips ]---
 
