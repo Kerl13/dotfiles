@@ -48,12 +48,29 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-" ---[ Quickfix shortcuts ]---
+" ---[ Quickfix ]---
 
 nnoremap <leader>qo :<c-u>copen<cr>
 nnoremap <leader>qc :<c-u>cclose<cr>
 nnoremap <leader>qn :<c-u>cnext<cr>
 nnoremap <leader>qp :<c-u>cprev<cr>
+
+" Automatically adjust the quickfix height.
+" Source: https://gist.github.com/juanpabloaj/5845848
+au FileType qf call <sid>AdjustWindowHeight(2, 10)
+function! s:AdjustWindowHeight(minheight, maxheight)
+  let l = 1
+  let n_lines = 0
+  let w_width = winwidth(0)
+  while l <= line('$')
+    " number to float for division
+    let l_len = strlen(getline(l)) + 0.0
+    let line_width = l_len / w_width
+    let n_lines += float2nr(ceil(line_width))
+    let l += 1
+  endwhile
+  exe max([min([n_lines, a:maxheight]), a:minheight]) . "wincmd _"
+endfunction
 
 " ---[ Installed plugins ]---
 
