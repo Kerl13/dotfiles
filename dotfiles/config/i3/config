@@ -190,7 +190,7 @@ bindsym XF86AudioRaiseVolume exec volume up
 bindsym XF86AudioLowerVolume exec volume down
 bindsym XF86AudioMute exec volume mute
 
-bindsym $mod+exclam exec mike toggle
+bindsym $mod+exclam exec mic toggle
 
 new_window pixel 1
 
