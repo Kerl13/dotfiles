@@ -96,6 +96,7 @@ Plug 'Raimondi/delimitMate'
 Plug 'itchyny/lightline.vim'
 Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'joom/latex-unicoder.vim'
 
 call plug#end()
 
@@ -224,6 +225,15 @@ function s:document()
     Man
   endif
 endfunction
+
+" ---[ Latex-unicoder ]---
+
+let g:unicoder_cancel_normal = 1
+let g:unicoder_cancel_insert = 1
+let g:unicoder_cancel_visual = 1
+nnoremap gL :<c-u>call unicoder#start(0)<cr>
+nnoremap gl F\ve:call unicoder#selection()<cr>
+vnoremap gl :<c-u>call unicoder#selection()<cr>
 
 " ---[ Tree-sitter ]---
 
