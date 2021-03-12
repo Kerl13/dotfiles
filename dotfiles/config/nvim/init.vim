@@ -18,7 +18,7 @@ set mouse=a
 set splitright
 set number
 set signcolumn=number
-set colorcolumn=80
+set colorcolumn=+1
 set textwidth=80
 set spelllang=en_gb
 
