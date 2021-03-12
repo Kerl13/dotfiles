@@ -193,6 +193,10 @@ let g:ale_linters_ignore = {
       \ 'tex': ['lacheck'],
       \}
 
+" Only lint when I open or save a buffer, not every time I write something!
+let g:ale_lint_on_text_changed = 0
+let g:ale_lint_on_insert_leave = 0
+
 " ---[ Navigate to next/previous error ]---
 
 nmap <silent> <leader>ep :call <sid>previous_error()<cr>
