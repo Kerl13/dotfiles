@@ -5,9 +5,9 @@ Microphone status
 import subprocess
 
 
-class Mike:
+class Mic:
     def _run(self, cmd):
-        return subprocess.check_output(["mike", cmd]).decode().strip()
+        return subprocess.check_output(["mic", cmd]).decode().strip()
 
     def get(self):
         return self._run("get")
@@ -21,12 +21,12 @@ class Py3status:
     """
 
     def __init__(self):
-        self.mike = Mike()
+        self.mic = Mic()
         self._get_status()
 
     def _get_status(self):
-        status = self.mike.get()
-        self.full_text = f"mike: {status}"
+        status = self.mic.get()
+        self.full_text = f"mic: {status}"
 
     def status(self):
         self._get_status()
@@ -36,4 +36,4 @@ class Py3status:
         }
 
     def on_click(self, event):
-        self.mike.toggle()
+        self.mic.toggle()
