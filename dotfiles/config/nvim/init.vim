@@ -5,6 +5,12 @@ filetype plugin indent on
 " Jump to last position on file reopening
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! `\"" | endif
 
+" Make the quickfix/loclist buffer unlisted (they are not shown by :bnext) and smaller
+" than default (10 lines).
+au FileType qf setlocal nobuflisted
+au FileType ll setlocal nobuflisted
+
+
 set whichwrap=b,s,<,>,[,]
 set listchars=tab:\ \ ⊣,trail:-,nbsp:␣
 set list
